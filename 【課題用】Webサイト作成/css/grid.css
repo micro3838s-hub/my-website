@@ -1,0 +1,38 @@
+/*商品一覧の親要素（CSS Gridの適用）*/
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/*均等な３列を作成*/
+    gap: 24px;/*カード同士の縦横の隙間*/
+    grid-template-rows: repeat(3,1fr);
+    width: 80%;
+    margin: 0 auto;
+}
+.grid-item{
+    background-image: url(../images/icon.svg);
+    height: 100px;
+
+}
+a{
+    display: block;
+    width: 100%;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.big{
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+.logo-big{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.logo-big img{
+        object-fit: contain;
+
+}
+  
+

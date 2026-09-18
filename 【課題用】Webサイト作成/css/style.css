@@ -1,0 +1,689 @@
+/* --------------------------------------------------
+     * 基本設定（リセット・共通スタイル）
+     * -------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0 auto;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+
+/* --------------------------------------------------
+     * 1. ヘッダー（固定表示：高さ 60px）
+     * -------------------------------------------------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+  background-color: #001F3F;
+  /* メインカラー：ディープネイビー */
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.header-logo {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.header img {
+  width: 200px;
+  height: auto;
+}
+
+.header-icons {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+    justify-content: flex-end;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-btn {
+  margin-left: auto;
+}
+
+/* --------------------------------------------------
+     * 2. ファーストビュー / ヒーローエリア（高さ 480px）
+     * -------------------------------------------------- */
+.hero {
+  height: 480px;
+  background: linear-gradient(rgba(1, 71, 140, 0.8), rgba(0, 31, 63, 0.3)),
+    url(../images/main_imege.png)
+    /* url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=800&q=80')  */
+    center/cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 16px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #39FF14;
+  /* アクセントカラー：ネオングリーン */
+  font-weight: bold;
+}
+
+.hero-title {
+  font-size: 24px;
+  margin: 6px 0 12px;
+  line-height: 1.3;
+}
+
+.btn-primary {
+  background-color: #E63946;
+  /* CTAカラー：レッド */
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  height: 48px;
+  /* タップ領域確保 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------
+     * 3. 重要なお知らせ（高さ 44px）
+     * -------------------------------------------------- */
+.news-bar {
+  height: 44px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 12px;
+}
+
+.news-badge {
+  background-color: #001F3F;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-right: 8px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.news-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------
+     * 4. クイックナビ（高さ 110px / 横スクロール）
+     * -------------------------------------------------- */
+.quick-nav {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.quick-nav-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  /* スクロールバー非表示（Webkit） */
+  scrollbar-width: none;
+}
+
+.quick-nav-list::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  text-decoration: none;
+  color: #333;
+}
+
+.quick-nav-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.quick-nav-label {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------
+     * 共通セクションスタイル
+     * -------------------------------------------------- */
+.section {
+  padding: 24px 16px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-left: 4px solid #001F3F;
+  padding-left: 8px;
+}
+
+/* --------------------------------------------------
+     * 5. ピックアップバナー（比率 16:9 / 高さ約200px）
+     * -------------------------------------------------- */
+.banner {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80') center/cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-image: url(../images/soccer_boy.png);
+  background-size: 396px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.banner-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* --------------------------------------------------
+     * 6. おすすめ商品（2列グリッド / 1カード高さ約280px）
+     * -------------------------------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* 正方形 1:1 */
+  object-fit: cover;
+  background-color: #f9f9f9;
+}
+
+.product-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.product-tag {
+  font-size: 9px;
+  color: #001F3F;
+  font-weight: bold;
+  background: #eef2f7;
+  padding: 2px 4px;
+  border-radius: 2px;
+  align-self: flex-start;
+  margin-bottom: 4px;
+}
+
+.product-name {
+  font-size: 12px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  /* 2行で省略文字にする設定 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #E63946;
+}
+/* .ale{
+  width: 30%;
+  position: absolute;
+  z-index: 9999;
+} */
+/* --------------------------------------------------
+     * 7. 店舗サービスバナー（O2O）
+     * -------------------------------------------------- */
+.o2o-banner {
+  background-color: #001F3F;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.o2o-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.o2o-desc {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+/* --------------------------------------------------
+     * 8. フッター
+     * -------------------------------------------------- */
+.footer {
+  background-color: #111;
+  color: #aaa;
+  padding: 30px 16px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+ * 📱 スマホ版（画面幅 1023px 以下）専用修正スタイル
+ * ================================================== */
+@media screen and (max-width: 1023px) {
+
+  /* 1. 全体設定：横スクロール（はみ出し）防止 */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* 2. 最上段 ユーティリティバー（テキスト折り返しと縮小） */
+
+  /* 3. ヘッダー：ロゴとアイコンのサイズ適正化 */
+  .header-inner {
+    height: 56px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .header-inner img {
+    max-width: 130px;
+    /* 画面からはみ出さないサイズに固定 */
+    height: auto;
+  }
+
+  .header-icons,
+  .header-actions {
+    gap: 8px;
+  }
+
+  .icon-btn {
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* 4. ナビゲーションバー：横スクロール化（縦文字化を防止） */
+  .nav {
+    display: block;
+    background-color: #001833;
+    overflow-x: auto;
+    /* タブが多くても横スクロールで収める */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+    /* スクロールバー非表示 */
+  }
+
+  /* 5. ヒーローエリア（メインビジュアル）のテキスト改行防止 */
+  .hero {
+    height: auto;
+    min-height: 380px;
+    padding: 30px 16px 20px;
+    justify-content: flex-end;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    /* スマホ画面に収まる文字サイズ */
+    line-height: 1.3;
+    word-break: keep-all;
+    /* 単語の途中で不自然に改行しない */
+    overflow-wrap: break-word;
+    margin-bottom: 8px;
+  }
+
+  /* 6. 商品グリッド（スマホは2列で綺麗に整列） */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+}
+    
+/* ==================================================
+   ハンバーガーメニュー
+================================================== */
+
+/* ハンバーガーアイコン */
+.hamburger-icon {
+  width: 22px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* メニューが開いた状態 */
+
+.menu-btn.is-active .hamburger-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.is-active .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.is-active .hamburger-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.hamburger-nav {
+  position: fixed;
+  top: 60px;
+  right: 0;
+
+  width: 80%;
+  max-width: 360px;
+  height: calc(100vh - 60px);
+
+  background-color: #fff;
+
+  z-index: 1001;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  overflow-y: auto;
+
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+}
+.hamburger-nav.is-active {
+  transform: translateX(0);
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s ease,
+              visibility 0.3s ease;
+}
+.hamburger-menu-header {
+  padding: 20px;
+  background-color: #001F3F;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hamburger-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger-list li {
+  border-bottom: 1px solid #eee;
+}
+
+.hamburger-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  color: #001F3F;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: background-color 0.2s;
+}
+
+.hamburger-list a:hover {
+  background-color: #f4f4f4;
+}
+
+.hamburger-list a span:last-child {
+  font-size: 24px;
+  font-weight: normal;
+  color: #999;
+}
+
+.hamburger-list .sale-menu {
+  color: #E63946;
+}
+
+/* ========================================
+   ブランド動画
+======================================== */
+
+.movie-intro {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #000;
+  overflow: hidden;
+}
+
+.movie {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ========================================
+   スキップボタン
+======================================== */
+
+.movie-skip {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+
+  padding: 8px 14px;
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   動画終了後の画面
+======================================== */
+
+.movie-end {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.6s ease;
+}
+
+
+/* JSで is-active が付いたら表示 */
+
+.movie-end.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ========================================
+   動画終了メッセージ
+======================================== */
+
+.movie-end-copy {
+  margin-bottom: 30px;
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.movie-end-copy strong {
+  font-size: 28px;
+}
+
+
+/* ========================================
+   サイトへ進むボタン
+======================================== */
+
+.movie-enter {
+  padding: 14px 24px;
+
+  color: #fff;
+  background: #E63946;
+
+  border: none;
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   動画を終了したとき
+======================================== */
+
+.movie-intro.is-hidden {
+  display: none;
+}
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+.movie-intro,
+.hero {
+  scroll-snap-align: start;
+}

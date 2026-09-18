@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FOOTBALL HUB - スマホ版トップページ</title>
+
+  <link rel="icon" href="images/icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       1. ヘッダー
+  ========================== -->
+  <header class="header">
+    
+<!-- =========================
+     ハンバーガーメニュー
+========================== -->
+
+<!-- 背景の暗い部分 -->
+<div class="menu-overlay" id="js-overlay"></div>
+
+<!-- メニュー本体 -->
+<nav class="hamburger-nav" id="js-nav" aria-label="メインメニュー">
+
+  <div class="hamburger-menu-header">
+    <span>MENU</span>
+  </div>
+
+  <ul class="hamburger-list">
+
+    <li>
+      <a href="#">
+        <span>スパイク</span>
+        <span>›</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <span>トレーニングシューズ</span>
+        <span>›</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <span>ウェア</span>
+        <span>›</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <span>ゴールキーパー</span>
+        <span>›</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <span>ジュニア</span>
+        <span>›</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <span>ボール・アクセサリー</span>
+        <span>›</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#" class="sale-menu">
+        <span>SALE</span>
+        <span>›</span>
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+    <!-- メニューボタン -->
+<button
+  class="icon-btn menu-btn"
+  type="button"
+  id="js-hamburger"
+  aria-label="メニューを開く"
+  aria-expanded="false"
+>
+  <span class="hamburger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</button>
+    <!-- ロゴ -->
+    <a href="#" class="header-logo" aria-label="FOOTBALL HUB ホーム">
+      <img src="images/titlelogo.svg" alt="FOOTBALL HUB">
+    </a>
+
+    <!-- ヘッダーアイコン -->
+    <div class="header-icons">
+
+      <!-- 検索 -->
+      <button class="icon-btn" type="button" aria-label="検索">
+        🔍
+      </button>
+
+      <!-- お気に入り -->
+      <button class="icon-btn" type="button" aria-label="お気に入り">
+        ♡
+      </button>
+
+      <!-- カート -->
+      <button class="icon-btn cart-btn" type="button" aria-label="カート">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
+
+    </div>
+
+  </header>
+  <!-- ==============================
+     ブランド動画
+============================== -->
+<section class="movie-intro" id="js-movie-intro">
+
+  <!-- 動画 -->
+  <video
+    id="js-movie"
+    class="movie"
+    autoplay
+    muted
+    playsinline
+  >
+    <source src="videos/サッカーECサイト広告動画.mp4" type="video/mp4">
+  </video>
+
+  <!-- スキップボタン -->
+  <button
+    type="button"
+    class="movie-skip"
+    id="js-movie-skip"
+  >
+    スキップ →
+  </button>
+
+  <!-- 動画終了後に表示するエリア -->
+  <div class="movie-end" id="js-movie-end">
+
+    <p class="movie-end-copy">
+      あなたのプレーに、<br>
+      <strong>最高のギアを。</strong>
+    </p>
+
+    <button
+      type="button"
+      class="movie-enter"
+      id="js-movie-enter"
+    >
+      FOOTBALL HUBを見る →
+    </button>
+
+  </div>
+
+</section>
+
+<!-- <button class="ale">アラート</button> -->
+  <!-- =========================
+       2. ヒーローエリア
+  ========================== -->
+  <section class="hero">
+
+    <div class="hero-subtitle">
+      NEW ARRIVAL 2026
+    </div>
+
+    <h1 class="hero-title">
+      限界を超える、<br>
+      最高の一蹴りを。
+    </h1>
+
+    <a href="#" class="btn-primary">
+      新作スパイクを見る
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       3. 重要なお知らせ
+  ========================== -->
+  <div class="news-bar">
+
+    <span class="news-badge">
+      お知らせ
+    </span>
+
+    <a href="#" class="news-text">
+      【実店舗】週末限定！足型精密測定イベント開催中
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       4. クイックナビ
+  ========================== -->
+  <nav class="quick-nav" aria-label="商品カテゴリー">
+
+    <div class="quick-nav-list">
+
+      <a href="#" class="quick-nav-item">
+        <div class="quick-nav-icon">👟</div>
+        <span class="quick-nav-label">スパイク</span>
+      </a>
+
+      <a href="#" class="quick-nav-item">
+        <div class="quick-nav-icon">👕</div>
+        <span class="quick-nav-label">ウェア</span>
+      </a>
+
+      <a href="#" class="quick-nav-item">
+        <div class="quick-nav-icon">🧤</div>
+        <span class="quick-nav-label">GK用品</span>
+      </a>
+
+      <a href="#" class="quick-nav-item">
+        <div class="quick-nav-icon">⚽</div>
+        <span class="quick-nav-label">ボール</span>
+      </a>
+
+      <a href="#" class="quick-nav-item">
+        <div class="quick-nav-icon">🏷️</div>
+        <span class="quick-nav-label">セール</span>
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       5. ピックアップ特集
+  ========================== -->
+  <section class="section">
+
+    <h2 class="section-title">
+      特集・ガイド
+    </h2>
+
+    <a href="#" class="banner">
+
+      <div class="banner-title">
+        土・人工芝・天然芝<br>
+        グラウンド別スパイクの選び方
+      </div>
+
+      <span class="banner-arrow">
+        →
+      </span>
+
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       6. おすすめ商品
+  ========================== -->
+  <section class="section product-section">
+
+    <h2 class="section-title">
+      注目の新着アイテム
+    </h2>
+
+    <div class="product-grid">
+
+      <!-- 商品1 -->
+      <a href="#" class="product-card">
+
+        <div class="product-image-wrap">
+          <img
+            class="product-img"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80"
+            alt="ハイパーヴェノム プロ FG スパイク"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="product-info">
+
+          <span class="product-tag">
+            HG / 人工芝対応
+          </span>
+
+          <div class="product-name">
+            ハイパーヴェノム プロ FG
+          </div>
+
+          <div class="product-price">
+            ¥21,450
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- 商品2 -->
+      <a href="#" class="product-card">
+
+        <div class="product-image-wrap">
+
+          <img
+            class="product-img"
+            src="images/spike.png"
+            alt="プレデター エリート FT スパイク"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="product-info">
+
+          <span class="product-tag">
+            AG / 人工芝専用
+          </span>
+
+          <div class="product-name">
+            プレデター エリート FT
+          </div>
+
+          <div class="product-price">
+            ¥24,200
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+    <!-- 商品一覧を見る -->
+    <a href="#" class="more-link">
+      商品をもっと見る →
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       7. 店舗体験（O2O）
+  ========================== -->
+  <section class="section store-section">
+
+    <div class="o2o-banner">
+
+      <div class="o2o-title">
+        🦶 3D足型測定 予約受付中
+      </div>
+
+      <div class="o2o-desc">
+        実店舗にて専門スタッフがあなたの足を精密計測。<br>
+        最適なスパイクをご提案します。
+      </div>
+
+      <a href="#" class="btn-primary btn-store">
+        店舗予約をする
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       8. フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="footer-links">
+
+      <a href="#">
+        利用規約
+      </a>
+
+      <a href="#">
+        特定商取引法
+      </a>
+
+      <a href="#">
+        店舗一覧
+      </a>
+
+    </div>
+
+    <p>
+      &copy; 2026 FOOTBALL HUB All Rights Reserved.
+    </p>
+
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

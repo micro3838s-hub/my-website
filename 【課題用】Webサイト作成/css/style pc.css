@@ -1,0 +1,584 @@
+    /* --------------------------------------------------
+     * 基本設定
+     * -------------------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      min-width: 1024px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 共通コンテナ（幅 1200px 中央揃え） */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* --------------------------------------------------
+     * 1. ユーティリティバー（高さ 32px）
+     * -------------------------------------------------- */
+    .top-bar {
+      background-color: #001226;
+      color: #ccc;
+      font-size: 12px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .top-bar-links a {
+      margin-left: 16px;
+    }
+
+    .top-bar-links a:hover {
+      color: #fff;
+    }
+
+    /* --------------------------------------------------
+     * 2. メインヘッダー（高さ 80px）
+     * -------------------------------------------------- */
+    .header {
+      background-color: #001F3F;
+      /* メインカラー */
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-inner {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-inner img{
+      width: 350px;
+      height: auto;
+    }
+
+    .header-logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* 検索バー */
+    .search-box {
+      display: flex;
+      width: 450px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 40px;
+      padding: 0 16px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      width: 50px;
+      height: 40px;
+      background-color: #E63946;
+      border: none;
+      color: #fff;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* ヘッダーアイコン */
+    .header-actions {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .action-icon {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+
+    /* ナビゲーション（メガメニュー風） */
+    .nav {
+      background-color: #001833;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-item a {
+      display: block;
+      padding: 14px 24px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .nav-item a:hover {
+      background-color: #E63946;
+    }
+
+    /* --------------------------------------------------
+     * 3. ヒーローエリア（高さ 550px）
+     * -------------------------------------------------- */
+    .hero {
+      height: 550px;
+      background: linear-gradient(180deg, rgba(0, 31, 63, 0.85) 0%, rgba(63, 14, 0, 0.3) 60%),url(../images/main_imege.png) center/cover;
+      /* background: linear-gradient(90deg, rgba(0, 31, 63, 0.85) 0%, rgba(0, 31, 63, 0.3) 60%),url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1600&q=80') center/cover; */
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-tag {
+      color: #39FF14;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 44px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .btn-hero {
+      display: inline-block;
+      background-color: #E63946;
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .btn-hero:hover {
+      background-color: #d62828;
+      transform: translateY(-2px);
+    }
+
+    /* --------------------------------------------------
+     * 4. セクション共通
+     * -------------------------------------------------- */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #001F3F;
+      padding-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #001F3F;
+    }
+
+    .more-link {
+      color: #001F3F;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .more-link:hover {
+      color: #E63946;
+    }
+
+    /* --------------------------------------------------
+     * 5. 商品グリッド（PC版：4列配置）
+     * -------------------------------------------------- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background-color: #fafafa;
+    }
+
+    .product-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-tag {
+      font-size: 11px;
+      font-weight: bold;
+      color: #001F3F;
+      background: #eef2f7;
+      padding: 3px 8px;
+      border-radius: 2px;
+      align-self: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .product-title {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .product-bottom {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #E63946;
+    }
+
+    .btn-add-cart {
+      background-color: #001F3F;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-add-cart:hover {
+      background-color: #E63946;
+    }
+
+    /* --------------------------------------------------
+     * 6. O2O 店舗体験バナー
+     * -------------------------------------------------- */
+    .o2o-banner {
+      background: linear-gradient(135deg, #001F3F 0%, #000d1a 100%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .o2o-info h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .o2o-info p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .btn-o2o {
+      background-color: #39FF14;
+      color: #001F3F;
+      padding: 16px 32px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .btn-o2o:hover {
+      background-color: #2ee00e;
+    }
+
+    /* --------------------------------------------------
+     * 7. フッター
+     * -------------------------------------------------- */
+    .footer {
+      background-color: #111;
+      color: #ccc;
+      padding-top: 60px;
+      padding-bottom: 30px;
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      text-align: center;
+      color: #666;
+    }
+
+
+    .container{
+      width: 100%;
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+/* ========================================
+   ブランド動画
+======================================== */
+
+.movie-intro {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.movie {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ========================================
+   スキップボタン
+======================================== */
+
+.movie-skip {
+  position: absolute;
+  right: 32px;
+  bottom: 30px;
+
+  padding: 10px 18px;
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    background 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.movie-skip:hover {
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 0.9;
+}
+
+
+/* ========================================
+   動画終了画面
+======================================== */
+
+.movie-end {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+
+  z-index: 5;
+}
+
+.movie-end.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ========================================
+   終了メッセージ
+======================================== */
+
+.movie-end-copy {
+  margin: 0 0 36px;
+
+  color: #fff;
+
+  font-size: 28px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.movie-end-copy strong {
+  display: inline-block;
+
+  margin-top: 6px;
+
+  font-size: 42px;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   サイトへ進むボタン
+======================================== */
+
+.movie-enter {
+  padding: 16px 32px;
+
+  color: #fff;
+  background: #E63946;
+
+  border: none;
+  border-radius: 4px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.movie-enter:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   動画を終了したあと
+======================================== */
+
+.movie-intro.is-hidden {
+  display: none;
+}
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+.movie-intro,
+.hero {
+  scroll-snap-align: start;
+}
+
+.movie-intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  background: #000;
+  overflow: hidden;
+
+  scroll-snap-align: start;
+}
+
+.hero {
+  min-height: 100vh;
+
+  scroll-snap-align: start;
+}
